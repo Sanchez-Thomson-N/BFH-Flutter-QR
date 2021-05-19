@@ -76,7 +76,7 @@ class CustomListTile extends StatelessWidget{
                  children: <Widget>[
              Icon(icon),
               Padding(
-                padding: const EdgeInsets.all(8.0)
+                padding: const EdgeInsets.all(8.0),
                 child: Text(text,style: TextStyle(
                   fontSize: 16.0),
 

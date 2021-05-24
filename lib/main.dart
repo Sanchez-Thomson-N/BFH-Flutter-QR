@@ -10,6 +10,7 @@ void main() {
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var children;
     return Scaffold(
         appBar: AppBar(
           title: Text("Foot Mark"),
@@ -60,39 +61,82 @@ class HomeScreen extends StatelessWidget {
         body: Center(
             child: InkWell(
                 onTap: () => null,
-                child: Container(
-                    width: 300.0,
-                    decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                              offset: Offset(0.0, 20.0),
-                              blurRadius: 30.0,
-                              color: Colors.black12)
-                        ],
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(22.0)),
-                    child: Row(
-                      children: <Widget>[
-                        Container(
-                          width: 200.0,
-                          height: 80,
-                          padding: EdgeInsets.symmetric(
-                              vertical: 12.0, horizontal: 12.0),
-                          child: Text(
-                            'Qr Code Scanner',
-                            style: Theme.of(context).textTheme.button.apply(
-                                color: Colors.white, fontSizeDelta: 12.0),
-                          ),
-                          decoration: BoxDecoration(
-                              color: Colors.lightBlue.shade700,
-                              borderRadius: BorderRadius.only(
-                                  bottomLeft: Radius.circular(95.0),
-                                  topLeft: Radius.circular(95.0),
-                                  bottomRight: Radius.circular(200.0))),
-                        ),
-                        Icon(Icons.qr_code_scanner, size: 50.0),
-                      ],
-                    )))));
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 200,
+                    ),
+                    Container(
+                        width: 300.0,
+                        decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                  offset: Offset(0.0, 20.0),
+                                  blurRadius: 30.0,
+                                  color: Colors.black12)
+                            ],
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(22.0)),
+                        child: Row(
+                          children: <Widget>[
+                            Container(
+                              width: 200.0,
+                              height: 80,
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 12.0, horizontal: 12.0),
+                              child: Text(
+                                'Qr Code Scanner',
+                                style: Theme.of(context).textTheme.button.apply(
+                                    color: Colors.white, fontSizeDelta: 12.0),
+                              ),
+                              decoration: BoxDecoration(
+                                  color: Colors.lightBlue.shade700,
+                                  borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(95.0),
+                                      topLeft: Radius.circular(95.0),
+                                      bottomRight: Radius.circular(200.0))),
+                            ),
+                            Icon(Icons.qr_code_scanner, size: 50.0),
+                          ],
+                        )),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                        width: 300.0,
+                        decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                  offset: Offset(0.0, 20.0),
+                                  blurRadius: 30.0,
+                                  color: Colors.black12)
+                            ],
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(22.0)),
+                        child: Row(
+                          children: <Widget>[
+                            Container(
+                              width: 200.0,
+                              height: 80,
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 12.0, horizontal: 12.0),
+                              child: Text(
+                                'Qr Code Generator',
+                                style: Theme.of(context).textTheme.button.apply(
+                                    color: Colors.white, fontSizeDelta: 12.0),
+                              ),
+                              decoration: BoxDecoration(
+                                  color: Colors.lightBlue.shade700,
+                                  borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(95.0),
+                                      topLeft: Radius.circular(95.0),
+                                      bottomRight: Radius.circular(200.0))),
+                            ),
+                            Icon(Icons.qr_code, size: 50.0),
+                          ],
+                        )),
+                  ],
+                ))));
   }
 }
 

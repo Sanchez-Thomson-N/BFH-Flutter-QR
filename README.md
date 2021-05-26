@@ -12,3 +12,7 @@ link for downloading APK file: https://drive.google.com/drive/folders/1gIkciip_0
 ![drawer](https://user-images.githubusercontent.com/56249313/119659316-ad0bfa00-be4b-11eb-96f6-2039cc5bdc8d.jpg)
 
 ![login_Screen](https://user-images.githubusercontent.com/56249313/119659515-d9277b00-be4b-11eb-95c1-475302ccc166.jpg)
+
+![Scanning_Process ](https://user-images.githubusercontent.com/56249313/119662488-15a8a600-be4f-11eb-8293-94f4c56e5ada.jpg)
+
+![Scan_Result](https://user-images.githubusercontent.com/56249313/119662541-21946800-be4f-11eb-9acd-403378354b62.jpg)

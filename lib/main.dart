@@ -1,4 +1,5 @@
 import 'package:bfh_qr/Homepage.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -117,7 +118,7 @@ class _SigninPageState extends State<SigninPage> {
                           Navigator.of(context).pop();
                         },
                         child: Center(
-                          child: Text('EXIT',
+                          child: Text("DON'T HAVE AN ACCOUNT? SIGN UP ",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'Montserrat')),

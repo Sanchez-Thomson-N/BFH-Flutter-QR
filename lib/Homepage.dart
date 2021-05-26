@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:bfh_qr/qrscan.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -10,7 +11,6 @@ void main() {
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var children;
     return Scaffold(
         appBar: AppBar(
           title: Text("Foot Mark"),
@@ -78,7 +78,10 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
                     InkWell(
-                        onTap: () => null,
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => QRScanPage()));
+                        },
                         child: Container(
                           width: 200.0,
                           height: 80,
@@ -152,11 +155,17 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class CustomListTile extends StatelessWidget {
-  IconData icon;
-  String text;
-  Function onTap;
+class CustomListTile extends StatefulWidget {
+  final IconData icon;
+  final String text;
+  final Function onTap;
   CustomListTile(this.icon, this.text, this.onTap);
+
+  @override
+  _CustomListTileState createState() => _CustomListTileState();
+}
+
+class _CustomListTileState extends State<CustomListTile> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -167,7 +176,7 @@ class CustomListTile extends StatelessWidget {
         ),
         child: InkWell(
           splashColor: Colors.lightBlueAccent.shade400,
-          onTap: onTap,
+          onTap: widget.onTap,
           child: Container(
             height: 40,
             child: Row(
@@ -175,11 +184,11 @@ class CustomListTile extends StatelessWidget {
               children: <Widget>[
                 Row(
                   children: <Widget>[
-                    Icon(icon),
+                    Icon(widget.icon),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        text,
+                        widget.text,
                         style: TextStyle(fontSize: 16.0),
                       ),
                     ),
